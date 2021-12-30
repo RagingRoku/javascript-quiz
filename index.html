@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Martin R CS50C Week06</title>
+    
+    <!--importing BootStrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 bg-primary">
+                <p class="h1 text-center">Welcome to the Quiz: now with jQuery!</p>
+            </div>
+            <div class="col-md-2 bg-dark"></div>
+            <div class="col-md-8 bg-warning" id="contentArea">
+
+                <p class="h5 text-center">Click below to begin! </p>
+
+                <div class="d-flex justify-content-center mb-2">
+                    <button id="startQuizButton" type="button" class="btn btn-primary btn-lg">Start Quiz</button>
+                </div>
+
+            </div>
+            <div class="col-md-2 bg-dark"></div>
+            <div class="col-md-12" id="progressArea">
+              <div id="quizProgressbar"></div>
+              <div id="dialogCorrect" title="That's right!">Great job!</div>
+              <div id="dialogWrong" title="Sorry, that was wrong!">The correct answer was: </div>
+
+            </div>
+            
+        </div>
+    </div>
+
+
+    <!--load jQuery minified file-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous">
+    </script>
+
+    <!--load jQuery UI minified file-->
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous">
+    </script>
+    <!--preemptively setting dialog boxes to autoOpen false -->
+    <script>
+      $( "#dialogCorrect" ).dialog({ autoOpen: false });
+      $( "#dialogWrong" ).dialog({ autoOpen: false });
+
+    </script>
+    <!--load custom JS-->
+    <script src="quiz.js"></script>
+  </body>
+</html>
